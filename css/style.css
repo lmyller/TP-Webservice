@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #212529;
+}
+
+.head{
+    width: 100%;
+    justify-content: space-between;
+    display: flex;  
+}
+
+select{
+    margin: 0 2%;
+    text-align: left;
+    border-style: none none solid none;
+    color: #cccccc;
+    border-color: #6c757d;
+    background-color: transparent;
+}
+
+select:hover{
+    cursor: pointer;
+    background-color: #212529;
+}
+
+#choose-country{
+    margin-top: 1%;
+    width: 20%;
+}
+
+#choose-indicator{
+    margin-top: 1%;
+    width: 50%;
+}
+
+#btn{
+    margin: 1% 2% 0 2%;
+    color: #cccccc !important;
+}
+
+.charts{
+    display: flex;
+    margin: 20px 0 0 2%;
+}
+
+.list-group{
+    width: 25% !important;
+}
+
+.list-group-item{
+    background-color: rgba(255,255,255,.05);;
+    color: #cccccc;
+}
+
+.list-group-item:hover{
+    background-color: #6c757d;
+    color: #cccccc;
+}
+
+.chart{
+    width: 100%;
+    max-width: 92%;
+    display: none;
+}
+
+.graph{
+    margin-left: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+span{
+    width:100%;
+    max-width:600px;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 8%;
+    color: #cccccc;
+    display: none;
+}
+
+header{
+    height: 8vh;
+}
+
+table{
+    width: 100%;
+    margin-top: 20px;
+    display: none;
+    text-align: center;
+    color: #cccccc !important;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1000px){
+    .head{
+        flex-direction: column;
+    }
+
+    header{
+        margin-bottom: 15% !important;
+    }
+
+    select{
+        height: 5vh;
+        margin-bottom: 20px;
+    }
+
+    #choose-country{
+        margin-top: 10px;
+        width: 96%;
+    }
+
+    #choose-indicator{
+        width: 96%;
+    }
+
+    button{
+        width: 96%;
+    }
+}
+
+@media screen and (max-width: 599px){
+    .head{
+        flex-direction: column;
+    }
+
+    select{
+        height: 5vh;
+        margin-bottom: 20px;
+    }
+
+    #choose-country{
+        margin-top: 10px;
+        width: 96%;
+    }
+
+    #choose-indicator{
+        width: 96%;
+    }
+    
+    header{
+        margin-bottom: 30% !important;
+    }
+
+    .list-group{
+        width: 100% !important;
+        background-color: rgba(255,255,255,.05);;
+        color: #cccccc;
+        margin-bottom: 30px !important;
+    }
+
+    .charts{
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .graph{
+        margin: 0 !important;
+    }
+
+    .chart{
+        margin-left: 5px;
+    }
+
+}
