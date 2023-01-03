@@ -44,8 +44,20 @@ function createIndicator(indicators) {
 btn.onclick = function () {
     removeButtons();
     removeTable();
-    verifyCountry(jsonCountries, selectCountry.value);
-    createListCountries(jsonCountries);
+    if(selectCountry.value !== '' && selectIndicator.value !== ''){
+        verifyCountry(jsonCountries, selectCountry.value);
+        createListCountries(jsonCountries);
+    }
+
+    if(selectCountry.value === '')
+        selectCountry.style.borderColor = 'red';
+    else
+        selectCountry.style.borderColor = '#6c757d';
+
+    if(selectIndicator.value === '')
+        selectIndicator.style.borderColor = 'red';
+    else
+        selectIndicator.style.borderColor = '#6c757d';
 }
 
 function removeButtons(){
@@ -202,6 +214,8 @@ function createGraph(json, date, data, money, indicator) {
                     data: data,
                     label: indicator,
                     borderColor: "red",
+                    pointBackgroundColor: 'grey',
+                    pointBorderColor: 'grey',
                     fill: false,
                 }]
             },
@@ -210,8 +224,22 @@ function createGraph(json, date, data, money, indicator) {
                     display: true,
                     position: 'bottom'
                 },
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            color: 'grey'
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines: {
+                            color: 'grey'
+                        }
+                    }]
+                }
             }
         });
+
+        createTable(data, date, data_money, money, indicator);
     }
 }
 
@@ -252,7 +280,7 @@ function createTable(data, date, data_money, money, indicator) {
             heading_date.innerHTML = date[i];
             heading_date.setAttribute('scope', 'row');
             let heading_data = document.createElement('td');
-            heading_data.innerHTML = data[i];
+            heading_data.innerHTML = data[i].toFixed(4);
             heading_data.setAttribute('scope', 'row');
 
             row.appendChild(heading_date);
