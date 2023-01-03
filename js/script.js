@@ -74,6 +74,7 @@ function searchIndicatorCountry(btnCountry) {
     removeTable();
     verifyCountry(jsonCountries, btnCountry);
     createListCountries(jsonCountries);
+    selectCountry.value = btnCountry;
 }
 
 function createListCountries(jsonCountries) {
@@ -154,7 +155,7 @@ function verifyMoney(json, money, indicator, country) {
 
 function createGraph(json, date, data, money, indicator) {
     const myChart = document.querySelector('#myChart');
-    let data_money = []
+    let data_money = null;
 
     myChart.style.display = 'block';
 
@@ -265,7 +266,7 @@ function createTable(data, date, data_money, money, indicator) {
         row_1.appendChild(heading_date);
         row_1.appendChild(heading_data);
 
-        if (data_money.length !== 0) {
+        if (data_money !== null) {
             let heading_money = document.createElement('th');
             heading_money.innerHTML = 'USD - ' + money;
             heading_money.setAttribute('scope', 'col');
@@ -286,7 +287,7 @@ function createTable(data, date, data_money, money, indicator) {
             row.appendChild(heading_date);
             row.appendChild(heading_data);
 
-            if (data_money.length !== 0) {
+            if (data_money !== null) {
                 let heading_money = document.createElement('td');
                 heading_money.innerHTML = data_money[i];
                 heading_money.setAttribute('scope', 'row');
