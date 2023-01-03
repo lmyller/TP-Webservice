@@ -9,7 +9,9 @@
 <p>Se for escolhido o país e o indicador, então será mostrado uma lista de botões com dezoito países aleatórios, um gráfico com o indicador socioeconômico do país e o preço de sua moeda, e uma tabela contendo o ano, o índicador socioeconômico e o preço da moeda nos anos na tabela.</p> 
 ![site-dados](/TP-Webservice/assets/imagens/dados-pesquisa.png)
 <p>Os países na lateral, caso seja clicado algum deles, então será mostrado o mesmo indicador socioeconômico para o país escolhido e os países na lateral serão alterados.</p>
-<p>Se for escolhido um indicador que API não possui dados sobre ele, então será informado uma mensagem que não há esses dados disponíveis para o país escolhido</p>
+<p>Se for escolhido um indicador que API não possui dados sobre ele, então será informado uma mensagem que não há esses dados disponíveis para o país escolhido.</p>
 ![site-dados-indisponiveis](/TP-Webservice/assets/imagens/dados-indisponiveis.png)
-<p>Se não for possível retornar os dados do preço da moeda e os dados do índicador for retornado, o gráfico é composto somente pela linha do indicador e a tabela sem a coluna do preço da moeda</p>
+<p>Se não for possível retornar os dados do preço da moeda e os dados do índicador for retornado, o gráfico é composto somente pela linha do indicador e a tabela sem a coluna do preço da moeda.</p>
 ![site-dados-indisponiveis](/TP-Webservice/assets/imagens/dados-money-none.png)
+<p>O vídeo abaixo demonstra o uso da página</p>
+<video controls autoplay loop src="/TP-Webservice/assets/videos/uso-pagina.mkv"></video>
