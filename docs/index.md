@@ -1,7 +1,7 @@
 # Trabalho prático de webservice
-<p>Trabalho prático de webservice cujo objetivo é o desenvolvimento de uma página web usando dados de APIs. Neste trabalho foram usados três APIs, a<a href="https://datahelpdesk.worldbank.org/knowledgebase/topics/125589-developer-information">API do banco mundia</a> a <a href="https://servicodados.ibge.gov.br/api/docs/paises">API do IBGE e uma terceira API que retorna o preço da moeda do país pesquisado.</p>
-<p>O ínício do uso da api é condicionado a execução do arquivo python <italic>apimoney.py</italic> que vai retornar os preços das moedas em um determinado período, a execução do arquivo depende da instalação de três pacotes, o <italic>beatifulSoup4</italic>, o <italic>requests</italic> e o <italic>Flask-Cors</italic>, a instalação dos pacotes é realizada através do pip como o arquivo requirements na pasta <italic>py</italic>:</p>
-<p>`pip install -r py/requirements.txt`</p>
+<p>Trabalho prático de webservice cujo objetivo é o desenvolvimento de uma página web usando dados de APIs. Neste trabalho foram usados três APIs, a <a href="https://datahelpdesk.worldbank.org/knowledgebase/topics/125589-developer-information">API do banco mundia</a> a <a href="https://servicodados.ibge.gov.br/api/docs/paises">API do IBGE e uma terceira API que retorna o preço da moeda do país pesquisado.</p>
+<p>O ínício do uso da api é condicionado a execução do arquivo python <i>apimoney.py</i> que vai retornar os preços das moedas em um determinado período, a execução do arquivo depende da instalação de três pacotes, o <i>beatifulSoup4</i>, o <i>requests</i> e o <i>Flask-Cors</i>, a instalação dos pacotes é realizada através do pip como o arquivo requirements na pasta <i>py</i>:</p>
+<p>pip install -r py/requirements.txt</p>
 <p>A página web necessita que seja escolhido um país e um indicador socioeconômico, como consta abaixo:</p>
 ![site](/TP-Webservice/assets/imagens/site.png)
 <p>Caso não seja informado o país ou o indicador socioeconômico, não será mostrado nada, mas as bordas inferiores dos dois inputs ficarão vermelhos:</p>
