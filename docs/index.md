@@ -14,4 +14,4 @@
 <p>Se não for possível retornar os dados do preço da moeda e os dados do índicador for retornado, o gráfico é composto somente pela linha do indicador e a tabela sem a coluna do preço da moeda.</p>
 ![site-dados-indisponiveis](/TP-Webservice/assets/imagens/dados-money-none.png)
 <p>O vídeo abaixo demonstra o uso da página.</p>
-<video width="480" height="360" controls autoplay loop src="/TP-Webservice/assets/videos/uso-pagina.mkv"></video>
+<video width="640" height="480" controls autoplay loop src="/TP-Webservice/assets/videos/uso-pagina.mkv"></video>
