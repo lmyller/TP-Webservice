@@ -7,7 +7,7 @@ let resultado = document.querySelector('#resultado');
 let jsonCountries;
 let lista = [];
 
-fetch('https://servicodados.ibge.gov.br/api/v1/paises?lang=EN')
+fetch('https://restcountries.com/v3.1/all')
     .then(response => response.json())
     .then(json => createCountries(json));
 
@@ -23,10 +23,10 @@ function createCountries(countries) {
     let lista = [];
 
     for (let value of countries) {
-        if (value['nome']['abreviado'] !== lista[0]) {
-            lista[0] = value['nome']['abreviado']
+        if (value['name']['common'] !== lista[0]) {
+            lista[0] = value['name']['common']
             let option = document.createElement('option');
-            option.text = value['nome']['abreviado'];
+            option.text = value['name']['common'];
             selectCountry.add(option, null);
         }
     }
@@ -81,7 +81,7 @@ function createListCountries(jsonCountries) {
     const listCountries = document.querySelector('.list-group');
 
     for (let i = 0; i < 18; i++) {
-        const country = jsonCountries[getRandomNumber(0, jsonCountries.length)]['nome']['abreviado'];
+        const country = jsonCountries[getRandomNumber(0, jsonCountries.length)]['name']['common'];
         button = document.createElement('button');
         button.setAttribute('type', 'button');
         button.setAttribute('data-index', 'i');
@@ -92,10 +92,10 @@ function createListCountries(jsonCountries) {
     }
 }
 
-function verifyCountry(countries, country) {
+function verifyCountry(countries, country) { 
     for (let value of countries)
-        if (value['nome']['abreviado'] === country)
-            dataCountry(value['id']['ISO-3166-1-ALPHA-2'], country);
+        if (value['name']['common'] === country)
+            dataCountry(value['cca3'], country);
 }
 
 function dataCountry(code, country) {
